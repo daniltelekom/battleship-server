@@ -66,6 +66,9 @@ function placeShip(index) {
     ship.forEach(i => {
       const cell = playerBoard.querySelector(`[data-index="\${i}"]`);
       cell.classList.add("ship");
+      cell.classList.add(`ship-${length}-${direction[0]}`);
+      cell.style.backgroundImage = `url('/assets/ships/ship-${length}-${direction[0]}.png')`;
+      cell.style.backgroundSize = 'cover/;
     });
     playerShips.push(ship);
     currentPlaced++;
